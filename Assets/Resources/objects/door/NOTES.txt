@@ -1,0 +1,17 @@
+Scaling:
+	x: 1
+	y: 0.47
+	z: 0.5
+
+Position:
+	x: -0.555
+	y: +0.691
+	z: +2.147
+
+Rotation:
+	x: 0
+	y: 270 (south wall)
+	z: 0
+
+Import Scale:
+	Scale Factor: 0.5

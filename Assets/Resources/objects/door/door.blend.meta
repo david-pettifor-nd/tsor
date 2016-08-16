@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: 862b566973f29d14089cb7e3d9f71352
+timeCreated: 1443537054
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Black
+    100002: Cube
+    100004: Cube_001
+    100006: Cube_002
+    100008: Cube_003
+    100010: Cube_004
+    100012: Cylinder
+    100014: //RootNode
+    100016: Sphere
+    100018: Keyhole
+    100020: Plane
+    100022: Knob
+    100024: NurbsPath_001
+    100026: KeyHole
+    100028: Cube_005
+    100030: Cube_006
+    100032: Cube_007
+    100034: Cube_008
+    100036: Cube_009
+    100038: Cube_010
+    100040: Key
+    400000: Black
+    400002: Cube
+    400004: Cube_001
+    400006: Cube_002
+    400008: Cube_003
+    400010: Cube_004
+    400012: Cylinder
+    400014: //RootNode
+    400016: Sphere
+    400018: Keyhole
+    400020: Plane
+    400022: Knob
+    400024: NurbsPath_001
+    400026: KeyHole
+    400028: Cube_005
+    400030: Cube_006
+    400032: Cube_007
+    400034: Cube_008
+    400036: Cube_009
+    400038: Cube_010
+    400040: Key
+    2300000: Black
+    2300002: Cube
+    2300004: Cube_001
+    2300006: Cube_002
+    2300008: Cube_003
+    2300010: Cube_004
+    2300012: Cylinder
+    2300014: Sphere
+    2300016: Keyhole
+    2300018: Plane
+    2300020: Knob
+    2300022: NurbsPath_001
+    2300024: KeyHole
+    2300026: Cube_005
+    2300028: Cube_006
+    2300030: Cube_007
+    2300032: Cube_008
+    2300034: Cube_009
+    2300036: Cube_010
+    2300038: Key
+    3300000: Black
+    3300002: Cube
+    3300004: Cube_001
+    3300006: Cube_002
+    3300008: Cube_003
+    3300010: Cube_004
+    3300012: Cylinder
+    3300014: Sphere
+    3300016: Keyhole
+    3300018: Plane
+    3300020: Knob
+    3300022: NurbsPath_001
+    3300024: KeyHole
+    3300026: Cube_005
+    3300028: Cube_006
+    3300030: Cube_007
+    3300032: Cube_008
+    3300034: Cube_009
+    3300036: Cube_010
+    3300038: Key
+    4300000: Cylinder
+    4300002: Sphere
+    4300004: Black
+    4300006: Cube_004
+    4300008: Cube_003
+    4300010: Cube_002
+    4300012: Cube_001
+    4300014: Cube
+    4300016: Plane
+    4300018: Keyhole
+    4300020: Knob
+    4300022: NurbsPath_001
+    4300024: KeyHole
+    4300026: Cube_010
+    4300028: Cube_009
+    4300030: Cube_008
+    4300032: Cube_007
+    4300034: Cube_006
+    4300036: Cube_005
+    4300038: Key
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 2
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,167 @@
+fileFormatVersion: 2
+guid: 19a17fca29cb5ca4f919f9d84444ce6d
+timeCreated: 1444327372
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Body
+    100004: Neck
+    100006: Sphere
+    100008: Jewel
+    100010: Sphere_002
+    100012: RightWing
+    100014: RightWing_001
+    100016: LeftWing
+    100018: Sphere_000
+    100020: Sphere_001
+    100022: Sphere_003
+    100024: Sphere_004
+    100026: Sphere_005
+    100028: Sphere_006
+    100030: Sphere_007
+    100032: Sphere_008
+    100034: Sphere_009
+    100036: Sphere_010
+    400000: //RootNode
+    400002: Body
+    400004: Neck
+    400006: Sphere
+    400008: Jewel
+    400010: Sphere_002
+    400012: RightWing
+    400014: RightWing_001
+    400016: LeftWing
+    400018: Sphere_000
+    400020: Sphere_001
+    400022: Sphere_003
+    400024: Sphere_004
+    400026: Sphere_005
+    400028: Sphere_006
+    400030: Sphere_007
+    400032: Sphere_008
+    400034: Sphere_009
+    400036: Sphere_010
+    2300000: //RootNode
+    2300002: Body
+    2300004: Neck
+    2300006: Sphere
+    2300008: Jewel
+    2300010: Sphere_002
+    2300012: RightWing
+    2300014: RightWing_001
+    2300016: LeftWing
+    2300018: Sphere_000
+    2300020: Sphere_001
+    2300022: Sphere_003
+    2300024: Sphere_004
+    2300026: Sphere_005
+    2300028: Sphere_006
+    2300030: Sphere_007
+    2300032: Sphere_008
+    2300034: Sphere_009
+    2300036: Sphere_010
+    3300000: //RootNode
+    3300002: Body
+    3300004: Neck
+    3300006: Sphere
+    3300008: Jewel
+    3300010: Sphere_002
+    3300012: RightWing
+    3300014: RightWing_001
+    3300016: LeftWing
+    3300018: Sphere_000
+    3300020: Sphere_001
+    3300022: Sphere_003
+    3300024: Sphere_004
+    3300026: Sphere_005
+    3300028: Sphere_006
+    3300030: Sphere_007
+    3300032: Sphere_008
+    3300034: Sphere_009
+    3300036: Sphere_010
+    4300000: Sphere
+    4300002: Neck
+    4300004: Body
+    4300006: Sphere_002
+    4300008: Jewel
+    4300010: RightWing_001
+    4300012: RightWing
+    4300014: LeftWing
+    4300016: Sphere_007
+    4300018: Sphere_006
+    4300020: Sphere_005
+    4300022: Sphere_004
+    4300024: Sphere_003
+    4300026: Sphere_001
+    4300028: Sphere_000
+    4300030: Sphere_009
+    4300032: Sphere_008
+    4300034: Sphere_010
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
