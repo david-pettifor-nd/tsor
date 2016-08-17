@@ -134,7 +134,8 @@ public class NewLevel : MonoBehaviour {
               random_cell = this.floorplan[rand_x, rand_y].cell;
               pos_x = random_cell.transform.position.x;// + (float)2.5;
               pos_z = random_cell.transform.position.z;// + (float)2.5;
-              GameObject scarab = Instantiate(Resources.Load("objects/stone_scarab/scarab", typeof(GameObject)), new Vector3(pos_x, (float)0.1, pos_z), Quaternion.identity) as GameObject;
+              GameObject scarab = Instantiate(Resources.Load("objects/gold_scarab/scarab", typeof(GameObject)), new Vector3(pos_x, (float)0.1, pos_z), Quaternion.identity) as GameObject;
+              scarab.transform.localScale = new Vector3((float)0.07, (float)0.07, (float)0.07);
               //GameObject scarab = Instantiate(Resources.Load("key", typeof(GameObject)), new Vector3(pos_x, (float)1.0, pos_z), Quaternion.identity) as GameObject;
               scarab.transform.Find("Body").gameObject.AddComponent<ScarabScript>();
               val.scarab_generated = true;
