@@ -17,7 +17,7 @@ public class ItemInView : MonoBehaviour {
         if (is_seen)
         {
             Vector3 diff = this.gameObject.transform.position - Camera.main.transform.position;
-            if(Mathf.Abs(diff.x) + Mathf.Abs(diff.z) < 1)
+            if(Mathf.Abs(diff.x) + Mathf.Abs(diff.z) < 2)
             {
                 //Debug.Log("Press E to pickup key");
                 can_pickup = true;
@@ -63,7 +63,6 @@ public class ItemInView : MonoBehaviour {
     {
         is_seen = true;
 
-        //GUI.Label(new Rect(Screen.width / 2, Screen.height / 2, 200f, 200f), "Press E to pickup");
     }
     void OnBecameInvisible()
     {

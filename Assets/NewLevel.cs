@@ -11,6 +11,7 @@ public class Cell
     public bool south_wall;
     public bool east_wall;
     public bool west_wall;
+	public bool visited;
 
     public Cell()
     {
@@ -21,6 +22,7 @@ public class Cell
         this.south_wall = true;
         this.east_wall = true;
         this.west_wall = true;
+		this.visited = false;
     }
 
 
@@ -32,7 +34,7 @@ public class NewLevel : MonoBehaviour {
     // Use this for initialization
     private int width;// =  GameObject.Find("Values");
     private int height;// = 10;
-    private int cell_size = 5;
+    public int cell_size = 5;
 
     private Cell[,] floorplan;
 
@@ -47,8 +49,17 @@ public class NewLevel : MonoBehaviour {
         GameObject player = GameObject.Find("FPSController");
         player.transform.position = new Vector3((float)0.7, 1, (float)0.506);
         floorplan = new Cell[width, height];
-        GenerateMaze();
 
+		// reset the map camera
+		Camera MapCam = GameObject.Find ("MapCam").GetComponent<Camera>();
+		MapCam.enabled = false;
+		Vector3 update_cam = MapCam.transform.position;
+		update_cam.z = player.transform.position.z;
+		update_cam.x = player.transform.position.x;
+		update_cam.y = 20;
+		MapCam.transform.position = update_cam;
+
+        GenerateMaze();
     }
 
     // Update is called once per frame
@@ -66,9 +77,14 @@ public class NewLevel : MonoBehaviour {
                 // create a new cell
                 GameObject next_cell = Instantiate(Resources.Load("objects/cell/Cell Template", typeof(GameObject)), new Vector3(i*cell_size, 0, j*cell_size), Quaternion.identity) as GameObject;
                 Cell cell = new Cell();
-                cell.cell = next_cell;
+				next_cell.AddComponent<CellScript> ();
+				CellScript cell_script = next_cell.GetComponent<CellScript> ();
+				cell_script.x = i;
+				cell_script.y = j;
+				cell.cell = next_cell;
                 cell.x = i;
                 cell.y = j;
+
                 this.floorplan[i, j] = cell;
             }
         }
@@ -87,13 +103,13 @@ public class NewLevel : MonoBehaviour {
                 if(this.floorplan[i, j].north_wall && this.floorplan[i, j].y > 0)
                 {
                     // remove it
-                    Destroy(this.floorplan[i, j].cell.transform.FindChild("NorthWall").gameObject);
+                    Destroy(this.floorplan[i, j].cell.transform.Find("NorthWall").gameObject);
                 }
 
                 if (this.floorplan[i, j].west_wall && this.floorplan[i, j].x > 0)
                 {
                     // remove it
-                    Destroy(this.floorplan[i, j].cell.transform.FindChild("WestWall").gameObject);
+                    Destroy(this.floorplan[i, j].cell.transform.Find("WestWall").gameObject);
                 }
             }
         }
@@ -113,7 +129,10 @@ public class NewLevel : MonoBehaviour {
         //Debug.Log("Placing key at: " + pos_x + "," + pos_z);
 
         // now that the maze is generated, we can add our key
-        GameObject key = Instantiate(Resources.Load("key", typeof(GameObject)), new Vector3(pos_x, (float)0.1, pos_z), Quaternion.identity) as GameObject;
+		Debug.Log("Loading key...");
+		GameObject key = Instantiate(Resources.Load("key", typeof(GameObject)), new Vector3(pos_x, (float)0.1, pos_z), Quaternion.identity) as GameObject;        
+
+
         key.AddComponent<ItemInView>();
         Debug.Log("Loaded key");
         //------------------ END KEY PLACEMENT ----------------------//
@@ -134,10 +153,12 @@ public class NewLevel : MonoBehaviour {
               random_cell = this.floorplan[rand_x, rand_y].cell;
               pos_x = random_cell.transform.position.x;// + (float)2.5;
               pos_z = random_cell.transform.position.z;// + (float)2.5;
-              GameObject scarab = Instantiate(Resources.Load("objects/gold_scarab/scarab", typeof(GameObject)), new Vector3(pos_x, (float)0.1, pos_z), Quaternion.identity) as GameObject;
-              scarab.transform.localScale = new Vector3((float)0.07, (float)0.07, (float)0.07);
+              GameObject scarab = Instantiate(Resources.Load("objects/new_scarab/scarab", typeof(GameObject)), new Vector3(pos_x, (float)0.1, pos_z), Quaternion.identity) as GameObject;
+				scarab.transform.localScale = new Vector3((float)0.1, (float)0.1, (float)0.01);
+				scarab.transform.Rotate (270, 0, 0);
+				scarab.AddComponent<ScarabScript> ();
               //GameObject scarab = Instantiate(Resources.Load("key", typeof(GameObject)), new Vector3(pos_x, (float)1.0, pos_z), Quaternion.identity) as GameObject;
-              scarab.transform.Find("Body").gameObject.AddComponent<ScarabScript>();
+              //scarab.transform.Find("Body").gameObject.AddComponent<ScarabScript>();
               val.scarab_generated = true;
             }
         }
@@ -166,9 +187,6 @@ public class NewLevel : MonoBehaviour {
         entrance_door.transform.localScale = new Vector3(1, (float)0.45, (float)0.45);
 
         //----------------- END DOORS ------------------//
-
-
-
 
     }
 
@@ -260,22 +278,22 @@ public class NewLevel : MonoBehaviour {
         {
             case "north":
                 //Debug.Log("Removing north wall");
-                Destroy(current_cell.cell.transform.FindChild("NorthWall").gameObject);
+                Destroy(current_cell.cell.transform.Find("NorthWall").gameObject);
                 current_cell.north_wall = false;
                 break;
             case "south":
                 //Debug.Log("Removing south wall");
-                Destroy(current_cell.cell.transform.FindChild("SouthWall").gameObject);
+                Destroy(current_cell.cell.transform.Find("SouthWall").gameObject);
                 current_cell.south_wall = false;
                 break;
             case "east":
                 //Debug.Log("Removing east wall");
-                Destroy(current_cell.cell.transform.FindChild("EastWall").gameObject);
+                Destroy(current_cell.cell.transform.Find("EastWall").gameObject);
                 current_cell.east_wall = false;
                 break;
             case "west":
                 //Debug.Log("Removing west wall");
-                Destroy(current_cell.cell.transform.FindChild("WestWall").gameObject);
+                Destroy(current_cell.cell.transform.Find("WestWall").gameObject);
                 current_cell.west_wall = false;
                 break;
         }
@@ -283,6 +301,7 @@ public class NewLevel : MonoBehaviour {
 
     public void RoundCorners()
     {
+		float pos_y = 1.5f;
         // loop through each cell looking for right-turns
         for(var x = 0; x < width; x++)
         {
@@ -295,7 +314,7 @@ public class NewLevel : MonoBehaviour {
                     Debug.Log("NE Corner");
                     float pos_x = floorplan[x, y].cell.gameObject.transform.position.x + (float)2.375;
                     float pos_z = floorplan[x, y].cell.gameObject.transform.position.z - (float)2.375;
-                    GameObject corner = Instantiate(Resources.Load("objects/cell/Corner", typeof(GameObject)), new Vector3(pos_x, (float)2.5, pos_z), Quaternion.identity) as GameObject;
+					GameObject corner = Instantiate(Resources.Load("objects/cell/Corner", typeof(GameObject)), new Vector3(pos_x, pos_y, pos_z), Quaternion.identity) as GameObject;
                 }
 
                 // check for SE corner
@@ -305,7 +324,7 @@ public class NewLevel : MonoBehaviour {
                     // then we have a SE corner to fill
                     float pos_x = floorplan[x, y].cell.gameObject.transform.position.x + (float)2.375;
                     float pos_z = floorplan[x, y].cell.gameObject.transform.position.z + (float)2.375;
-                    GameObject corner = Instantiate(Resources.Load("objects/cell/Corner", typeof(GameObject)), new Vector3(pos_x, (float)2.5, pos_z), Quaternion.identity) as GameObject;
+					GameObject corner = Instantiate(Resources.Load("objects/cell/Corner", typeof(GameObject)), new Vector3(pos_x, pos_y, pos_z), Quaternion.identity) as GameObject;
                 }
 
                 // check for NW corner
@@ -315,7 +334,7 @@ public class NewLevel : MonoBehaviour {
                     // then we have a NW corner to fill
                     float pos_x = floorplan[x, y].cell.gameObject.transform.position.x - (float)2.375;
                     float pos_z = floorplan[x, y].cell.gameObject.transform.position.z - (float)2.375;
-                    GameObject corner = Instantiate(Resources.Load("objects/cell/Corner", typeof(GameObject)), new Vector3(pos_x, (float)2.5, pos_z), Quaternion.identity) as GameObject;
+					GameObject corner = Instantiate(Resources.Load("objects/cell/Corner", typeof(GameObject)), new Vector3(pos_x, pos_y, pos_z), Quaternion.identity) as GameObject;
                 }
 
                 // check for SW corner
@@ -325,7 +344,7 @@ public class NewLevel : MonoBehaviour {
                     // then we have a NE corner to fill
                     float pos_x = floorplan[x, y].cell.gameObject.transform.position.x - (float)2.375;
                     float pos_z = floorplan[x, y].cell.gameObject.transform.position.z + (float)2.375;
-                    GameObject corner = Instantiate(Resources.Load("objects/cell/Corner", typeof(GameObject)), new Vector3(pos_x, (float)2.5, pos_z), Quaternion.identity) as GameObject;
+					GameObject corner = Instantiate(Resources.Load("objects/cell/Corner", typeof(GameObject)), new Vector3(pos_x, pos_y, pos_z), Quaternion.identity) as GameObject;
                 }
             }
         }

@@ -13,15 +13,19 @@ public class PlayerController2 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        float moveHorizontal = Input.GetAxisRaw("Horizontal");
-        float moveVertical = Input.GetAxisRaw("Vertical");
+		Camera MapCam = GameObject.Find ("MapCam").GetComponent<Camera>();
+		if (MapCam.enabled) {
 
-        movement.Set(moveHorizontal, 0f, moveVertical);
+		} else {
+			float moveHorizontal = Input.GetAxisRaw("Horizontal");
+			float moveVertical = Input.GetAxisRaw("Vertical");
 
-        movement = movement.normalized * speed * Time.deltaTime;
+			movement.Set(moveHorizontal, 0f, moveVertical);
 
-        //rb.AddRelativeForce(moveHorizontal, 0, moveVertical);
-        rb.MovePosition(transform.position + movement);
+			movement = movement.normalized * speed * Time.deltaTime;
 
+			//rb.AddRelativeForce(moveHorizontal, 0, moveVertical);
+			rb.MovePosition(transform.position + movement);
+		}
     }
 }

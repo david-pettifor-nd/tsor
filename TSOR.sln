@@ -1,11 +1,11 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{02441142-8109-1A1C-E614-045ADFC794D5}") = "tsor", "Assembly-CSharp-firstpass.csproj", "{67A46C04-88E9-5521-F011-29FB10AF9871}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tsor", "Assembly-CSharp.csproj", "{F1EF9FD3-A429-33D0-4D31-C359CC5B3086}"
 EndProject
-Project("{02441142-8109-1A1C-E614-045ADFC794D5}") = "tsor", "Assembly-CSharp.csproj", "{F1EF9FD3-A429-33D0-4D31-C359CC5B3086}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tsor", "Assembly-CSharp-firstpass.csproj", "{67A46C04-88E9-5521-F011-29FB10AF9871}"
 EndProject
-Project("{02441142-8109-1A1C-E614-045ADFC794D5}") = "tsor", "Assembly-CSharp-Editor.csproj", "{F6532CCA-B24E-14D0-61A0-7067B6AF8B3D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tsor", "Assembly-CSharp-Editor.csproj", "{F6532CCA-B24E-14D0-61A0-7067B6AF8B3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{67A46C04-88E9-5521-F011-29FB10AF9871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67A46C04-88E9-5521-F011-29FB10AF9871}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67A46C04-88E9-5521-F011-29FB10AF9871}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67A46C04-88E9-5521-F011-29FB10AF9871}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F1EF9FD3-A429-33D0-4D31-C359CC5B3086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F1EF9FD3-A429-33D0-4D31-C359CC5B3086}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1EF9FD3-A429-33D0-4D31-C359CC5B3086}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1EF9FD3-A429-33D0-4D31-C359CC5B3086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67A46C04-88E9-5521-F011-29FB10AF9871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A46C04-88E9-5521-F011-29FB10AF9871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A46C04-88E9-5521-F011-29FB10AF9871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A46C04-88E9-5521-F011-29FB10AF9871}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F6532CCA-B24E-14D0-61A0-7067B6AF8B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F6532CCA-B24E-14D0-61A0-7067B6AF8B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6532CCA-B24E-14D0-61A0-7067B6AF8B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -48,5 +48,4 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
-
 EndGlobal
